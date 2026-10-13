@@ -1,21 +1,38 @@
+/* ========================================================================== 
+    YAMI-NO CARD - styles.css           
+                                                                           
+    Colores usados:                                                           
+    negro #0b0b0b | negro suave #1a1a1a | dorado #f2c66d                    
+    dorado oscuro #b8892b | texto claro #fff7fb | texto oscuro #250d19      
+                                                                            
+
+   ========================================================================== */
+
+
+/* -------------------------------------------------------------------------- */
+/*  BASE                                                                      */
+/* -------------------------------------------------------------------------- */
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
 html {
     font-size: 62.5%;
 }
 
+
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
-    background-color: #6e5a8e;
-    /* NUEVO (opcional): degradé de fondo; si lo sacás queda tu color liso */
-    background-image: linear-gradient(160deg, #4d3d68 0%, #6e5a8e 100%);
-    background-attachment: fixed;
-    color: #fff7fb; 
+    background-color: #0b0b0b;
+    color: #fff7fb;
 
+    
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -33,7 +50,7 @@ main {
     align-items: center;
 }
 
-/* NUEVO: que ninguna imagen se salga de su contenedor */
+
 img {
     max-width: 100%;
 }
@@ -54,14 +71,13 @@ h2{
     margin: 3rem 0;
 }
 
-/* NUEVO: títulos de las cards centrados */
 h3 {
     font-size: 2rem;
     text-align: center;
     padding: 0 1rem;
 }
 
-/* NUEVO: foco visible al navegar con el teclado */
+/* Extra de accesibilidad: se ve dónde estás al navegar con el teclado */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -72,7 +88,7 @@ textarea:focus-visible {
 
 .btn {
     border: none;
-    font-family: inherit;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
     font-weight: bold;
     padding: 1.6rem;
@@ -80,8 +96,12 @@ textarea:focus-visible {
     cursor: pointer;
 }
 
+
+/* -------------------------------------------------------------------------- 
+  HEADER, NAV Y FOOTER                                                      
+ -------------------------------------------------------------------------- */
 header, footer {
-    background-color: #5c4a7a;
+    background-color: #1a1a1a;
     color: #fff7fb;
     width: 100%;
 
@@ -90,8 +110,14 @@ header, footer {
     align-items: center;
 }
 
+
+header {
+    border-bottom: 2px solid #f2c66d;
+}
+
 footer {
-    padding: 1rem 4rem;
+    padding: 1.5rem 4rem;
+    border-top: 2px solid #f2c66d;
 }
 
 .div-logo {
@@ -109,6 +135,23 @@ footer {
 }
 
 
+.logo {
+    color: #f2c66d;
+    font-weight: 800;
+}
+
+.header-nav a {
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+}
+
+
+.header-nav a:hover {
+    background-color: #f2c66d;
+    color: #0b0b0b;
+}
+
 .header-nav{
     margin-right: 2rem;
 }
@@ -124,24 +167,22 @@ footer {
 }
 
 .footer-list img {
-    width: 5rem;
+    width: 4rem;
     padding: 0.5rem;
 }
 
 
-
-/*COLORES*/
-
+/* -------------------------------------------------------------------------- 
+  COLORES (clases reutilizables que usa el HTML)                            
+ -------------------------------------------------------------------------- */
 .bg-primary {
-    background-color: #6e5a8e;
+    background-color: #1a1a1a;
 }
 
-/* CAMBIO: antes era #250d19, igual que el texto del botón (.text-dark), y no se leía */
 .bg-secondary {
     background-color: #f2c66d;
 }
 
-/* CAMBIO: typo (.tex-light) */
 .text-light {
     color: #fff7fb;
 }
@@ -150,26 +191,34 @@ footer {
     color: #250d19;
 }
 
-/* CAMBIO: typo (.tex-secondary) y color. Antes era #6e5a8e, igual que el fondo de la página */
 .text-secondary {
     color: #f2c66d;
 }
 
-/* HOME*/
+
 
 .inicio{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
+    padding: 4rem 2rem;
+    border: 2px solid #f2c66d;
+    border-radius: 1.5rem;
+    background-color: #1a1a1a;
+    background-image: url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .inicio h1{
     width: 100%;
     text-align: center;
+    color: #f2c66d;
 }
 
-/* CAMBIO: typo (.parraf) para que coincida con class="parrafo" del HTML */
 .parrafo {
     width: 80%;
     text-align: center;
@@ -177,7 +226,7 @@ footer {
     padding: 3rem;
 }
 
-/* NUEVO: lista de navegación interna (anclas) */
+
 .nav-interna ul {
     list-style: none;
     display: flex;
@@ -196,20 +245,20 @@ footer {
     border-radius: 1rem;
 }
 
-/* CAMBIO: typo (.contenerdor-tarjetas) para que coincida con el HTML */
+
+
 .contenedor-tarjetas {
     display: flex;
     justify-content: center;
-    /* para que se acomode los hijos abajo no tienen espacio* el uso de flex-wrap */
     flex-wrap: wrap;
     gap: 2rem;
 }
 
-
 .card {
-    background-color: #8a79a8;
+    background-color: #1a1a1a;
+    color: #fff7fb;
+    border: 1px solid #b8892b;
     width: 30rem;
-    /* CAMBIO: evita que se desborde en celulares chicos */
     max-width: 100%;
     border-radius: 1rem;
     overflow: hidden;
@@ -219,30 +268,53 @@ footer {
     align-items: center;
     gap: 2rem;
     padding-bottom: 2rem;
-        
 }
 
-/* CAMBIO: imágenes rectangulares y parejas (con el óvalo las cartas quedaban recortadas).
-   Si querés volver a tu estilo, cambiá esto por: width: 100%; border-radius: 20rem; */
+.card:hover {
+    border-color: #f2c66d;
+}
+
+
+.card h3 {
+    color: #f2c66d;
+}
+
 .card img {
     width: 100%;
-    height: 30rem;
-    object-fit: cover;
+    height: 28rem;
+    object-fit: contain;
+    background-color: #fff;
+    padding: 1rem;
 }
 
-/* NUEVO: Reseñas con GRID */
+.card p {
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+
+.card .btn {
+    margin-top: auto;
+}
+
+
+/* -------------------------------------------------------------------------- 
+  RESEÑAS                                                 
+-------------------------------------------------------------------------- */
 #resenas {
     width: 100%;
 }
 
 .contenedor-resenas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
 
 .resena {
-    background-color: #f2c66d;
+    background-color: #1a1a1a;
+    color: #fff7fb;
+    border-left: 4px solid #f2c66d;
     border-radius: 1rem;
     padding: 2rem;
 
@@ -259,120 +331,129 @@ footer {
 .autor {
     font-weight: bold;
     text-align: right;
+    color: #f2c66d;
 }
 
 
-/* -------------------------------------------------------------------------- */
-/*                                  CONTACTO                                  */
-/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- 
+  CONTACTO                                                                  
+ -------------------------------------------------------------------------- */
 .contacto {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .titulo-contacto {
-  margin: 2rem 0;
+    margin: 2rem 0;
 }
 
 .form-contacto {
-  background-color: #8a79a8;
-  color: #250d19;
+    background-color: #1a1a1a;
+    color: #fff7fb;
+    border: 1px solid #b8892b;
 
-  width: 100%;
-  max-width: 50rem;
+    width: 100%;
+    max-width: 50rem;
 
-  font-size: 2rem;
-  padding: 3rem;
-  border-radius: 1rem;
+    font-size: 2rem;
+    padding: 3rem;
+    border-radius: 1rem;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* sutil */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .grupo-input {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
 }
 
-/* CAMBIO: saqué "outline: none" (ahora el foco se ve con la regla de arriba)
-   y sumé font-family para que los campos usen Poppins */
 .grupo-input input,
 .grupo-input textarea {
-  width: 100%;
-  padding: 1.2rem;
-  font-family: inherit;
-  font-size: 1.6rem;
+    width: 100%;
+    padding: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
 
-  color: #250d19;
-  background-color: #fff7fb;
+    color: #250d19;
+    background-color: #fff7fb;
 
-  border: 2px solid #6e5a8e;
-  border-radius: 0.8rem;
+    border: 2px solid #b8892b;
+    border-radius: 0.8rem;
 }
 
 .grupo-input textarea {
-  min-height: 10rem;
-  resize: vertical;
+    min-height: 10rem;
+    resize: vertical;
 }
 
 
+/* -------------------------------------------------------------------------- 
+ MEDIA: quise probar para celulares, como metodo agreado
+ -------------------------------------------------------------------------- */
 
-/* -------------------------------------------------------------------------- */
-/*                                MEDIA QUERIES                               */
-/* -------------------------------------------------------------------------- */
-/* NUEVO: tablets */
-@media (max-width: 900px) {
-  main {
-    width: 90%;
-  }
+/* Tablets y celulares: hasta 768px */
+@media only screen and (max-width: 768px) {
+    main {
+        width: 90%;
+    }
+
+    /* Grid: de 3 columnas a 1 */
+    .contenedor-resenas {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* CAMBIO: tu media query de celulares, ahora más completa */
-@media (max-width: 600px) {
-  header,
-  footer {
-    flex-direction: column;
-  }
+/* Celulares: hasta 600px */
+@media only screen and (max-width: 600px) {
+    header,
+    footer {
+        flex-direction: column;
+    }
 
-  .header-nav,
-  .div-logo {
-    margin: 0;
-  }
+    .header-nav,
+    .div-logo {
+        margin: 0;
+    }
 
-  .logo,
-  .header-nav a {
-    font-size: 2.2rem;
-    padding: 1rem;
-  }
+    .logo,
+    .header-nav a {
+        font-size: 2.2rem;
+        padding: 1rem;
+    }
 
-  main {
-    width: 94%;
-  }
+    main {
+        width: 94%;
+    }
 
-  h1 {
-    font-size: 2.4rem;
-  }
+    h1 {
+        font-size: 2.4rem;
+    }
 
-  h2 {
-    font-size: 2rem;
-  }
+    h2 {
+        font-size: 2rem;
+    }
 
-  .parrafo {
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.7rem;
-  }
+    .parrafo {
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 1.7rem;
+    }
 
-  .form-contacto {
-    padding: 2rem;
-    font-size: 1.8rem;
-  }
+    .inicio {
+        padding: 2.5rem 1rem;
+    }
 
-  footer {
-    padding: 1rem 2rem;
-    text-align: center;
-  }
+    .form-contacto {
+        padding: 2rem;
+        font-size: 1.8rem;
+    }
+
+    footer {
+        padding: 1rem 2rem;
+        text-align: center;
+    }
 }

@@ -9,9 +9,8 @@
           rel="stylesheet"
         />
 
-        <!-- CAMBIO: el index está en la raíz, así que la ruta es ./css y no ../css -->
+        
         <link rel="stylesheet" href="./css/styles.css"/>
-        <!-- CAMBIO: título con el nombre de la tienda -->
         <title>Yami-no Card | Tienda de Yu-Gi-Oh!</title>
     </head>
     <body>
@@ -28,13 +27,11 @@
         <main>
             <section class="inicio">
                 <h1>Bienvenidx a Yami-no Card</h1>
-                <!-- CAMBIO: texto real en lugar del lorem ipsum (editalo a tu gusto) -->
                 <p class="parrafo">
                     Cartas singles, booster boxes y accesorios para tu duelo de Yu-Gi-Oh! TCG.
                     Armá tu mazo, protegelo y llevalo a donde quieras.
                 </p>
 
-                <!-- NUEVO: lista de navegación interna (la pide la consigna) -->
                 <nav class="nav-interna" aria-label="En esta página">
                     <ul>
                         <li><a href="#productos">Productos</a></li>
@@ -43,7 +40,6 @@
                 </nav>
             </section>
 
-            <!-- CAMBIO: id para que funcione el ancla -->
             <section id="productos">
                 <h2 class="titulo-productos text-secondary">Nuestros Productos</h2>
                 <div class="contenedor-tarjetas">
@@ -59,9 +55,7 @@
 
                     <article class="card text-dark">
                         <img src="./img/darkmagicianbox.jpg" alt="Deck box temática Dark Magician"/>
-                        <!-- CAMBIO: título distinto al de la carta -->
                         <h3>Deck Box Dark Magician</h3>
-                        <!-- CAMBIO: typos corregidos -->
                         <p>Deck box temática Dark Magician.</p>
                         <p>$15000</p>
                         <button class="btn bg-secondary text-dark" type="button">
@@ -79,7 +73,6 @@
                         </button>
                     </article>
 
-                    <!-- NUEVO (placeholder): cambiá imagen, texto y precio por los reales -->
                     <article class="card text-dark">
                         <img src="./img/playmatdante.avif" alt="Playmat de Yu-Gi-Oh!
                         Traveler of the abyss"/>
@@ -92,7 +85,6 @@
                         </button>
                     </article>
 
-                    <!-- NUEVO (placeholder): cambiá imagen, texto y precio por los reales -->
                     <article class="card text-dark">
                         <img src="./img/protectoresyugioh.jpg" alt="Protectores de cartas"/>
                         <h3>Protectores 25° aniversario</h3>
@@ -105,7 +97,6 @@
                 </div>
             </section>
 
-            <!-- NUEVO: sección Reseñas con Grid (reseñas de ejemplo, reemplazalas) -->
             <section id="resenas">
                 <h2 class="text-secondary">Reseñas</h2>
                 <div class="contenedor-resenas">
@@ -125,7 +116,7 @@
 
                     <article class="resena text-dark">
                         <blockquote>
-                            <p>El playmat quedó genial para los torneos del club.</p>
+                            <p>El playmat quedó genial para los torneos en la tienda.</p>
                         </blockquote>
                         <p class="autor">Cliente 3</p>
                     </article>
@@ -136,7 +127,6 @@
             <p>Sitio creado por Manu para Talento Tech</p>
             <nav aria-label="Redes sociales">
                 <ul class="footer-list">
-                    <!-- CAMBIO: cada ícono en su propio <li> -->
                     <li><img src="./img/instagramlogo.avif" alt="Logo de Instagram"/></li>
                     <li><img src="./img/whatsapplogopng.webp" alt="Logo de WhatsApp"/></li>
                 </ul>
