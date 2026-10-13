@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Yami-no Card: tienda de cartas, booster boxes y accesorios de Yu-Gi-Oh! TCG.">
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;0,800;1,100;1,400;1,600;1,700&display=swap"
+          rel="stylesheet"
+        />
+
+        <!-- CAMBIO: el index está en la raíz, así que la ruta es ./css y no ../css -->
+        <link rel="stylesheet" href="./css/styles.css"/>
+        <!-- CAMBIO: título con el nombre de la tienda -->
+        <title>Yami-no Card | Tienda de Yu-Gi-Oh!</title>
+    </head>
+    <body>
+        <header>
+            <div class="div-logo"><a class="logo" href="./index.html">Yami-no Card</a></div>
+            
+            <nav class="header-nav" aria-label="Principal">
+                <ul class="nav-links">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="inicio">
+                <h1>Bienvenidx a Yami-no Card</h1>
+                <!-- CAMBIO: texto real en lugar del lorem ipsum (editalo a tu gusto) -->
+                <p class="parrafo">
+                    Cartas singles, booster boxes y accesorios para tu duelo de Yu-Gi-Oh! TCG.
+                    Armá tu mazo, protegelo y llevalo a donde quieras.
+                </p>
+
+                <!-- NUEVO: lista de navegación interna (la pide la consigna) -->
+                <nav class="nav-interna" aria-label="En esta página">
+                    <ul>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#resenas">Reseñas</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <!-- CAMBIO: id para que funcione el ancla -->
+            <section id="productos">
+                <h2 class="titulo-productos text-secondary">Nuestros Productos</h2>
+                <div class="contenedor-tarjetas">
+                    <article class="card text-dark">
+                        <img src="./img/darkmagiciancard.jpg" alt="Carta Dark Magician"/>
+                        <h3>Dark Magician</h3>
+                        <p>El mago oscuro más poderoso de la historia.</p>
+                        <p>$5000</p>
+                        <button class="btn bg-secondary text-dark" type="button">
+                            Agregar al Carrito
+                        </button>
+                    </article>
+
+                    <article class="card text-dark">
+                        <img src="./img/darkmagicianbox.jpg" alt="Deck box temática Dark Magician"/>
+                        <!-- CAMBIO: título distinto al de la carta -->
+                        <h3>Deck Box Dark Magician</h3>
+                        <!-- CAMBIO: typos corregidos -->
+                        <p>Deck box temática Dark Magician.</p>
+                        <p>$15000</p>
+                        <button class="btn bg-secondary text-dark" type="button">
+                            Agregar al Carrito
+                        </button>
+                    </article>
+
+                    <article class="card text-dark">
+                        <img src="./img/chaosoriginboosterbox.webp" alt="Booster box del set Chaos Origins"/>
+                        <h3>Chaos Origins</h3>
+                        <p>Booster Box con cartas del set Chaos Origins.</p>
+                        <p>$180000</p>
+                        <button class="btn bg-secondary text-dark" type="button">
+                            Agregar al Carrito
+                        </button>
+                    </article>
+
+                    <!-- NUEVO (placeholder): cambiá imagen, texto y precio por los reales -->
+                    <article class="card text-dark">
+                        <img src="./img/playmatdante.avif" alt="Playmat de Yu-Gi-Oh!
+                        Traveler of the abyss"/>
+                        <h3>Playmat de Yu-Gi-Oh!
+                        Traveler of the abyss</h3>
+                        <p>Playmat para duelos, antideslizante.</p>
+                        <p>$200000</p>
+                        <button class="btn bg-secondary text-dark" type="button">
+                            Agregar al Carrito
+                        </button>
+                    </article>
+
+                    <!-- NUEVO (placeholder): cambiá imagen, texto y precio por los reales -->
+                    <article class="card text-dark">
+                        <img src="./img/protectoresyugioh.jpg" alt="Protectores de cartas"/>
+                        <h3>Protectores 25° aniversario</h3>
+                        <p>Pack de protectores para tus cartas.</p>
+                        <p>$15000</p>
+                        <button class="btn bg-secondary text-dark" type="button">
+                            Agregar al Carrito
+                        </button>
+                    </article>
+                </div>
+            </section>
+
+            <!-- NUEVO: sección Reseñas con Grid (reseñas de ejemplo, reemplazalas) -->
+            <section id="resenas">
+                <h2 class="text-secondary">Reseñas</h2>
+                <div class="contenedor-resenas">
+                    <article class="resena text-dark">
+                        <blockquote>
+                            <p>Me llegó la carta en perfecto estado y bien protegida.</p>
+                        </blockquote>
+                        <p class="autor">Cliente 1</p>
+                    </article>
+
+                    <article class="resena text-dark">
+                        <blockquote>
+                            <p>Buenos precios en booster boxes y atención rápida.</p>
+                        </blockquote>
+                        <p class="autor">Cliente 2</p>
+                    </article>
+
+                    <article class="resena text-dark">
+                        <blockquote>
+                            <p>El playmat quedó genial para los torneos del club.</p>
+                        </blockquote>
+                        <p class="autor">Cliente 3</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Sitio creado por Manu para Talento Tech</p>
+            <nav aria-label="Redes sociales">
+                <ul class="footer-list">
+                    <!-- CAMBIO: cada ícono en su propio <li> -->
+                    <li><img src="./img/instagramlogo.avif" alt="Logo de Instagram"/></li>
+                    <li><img src="./img/whatsapplogopng.webp" alt="Logo de WhatsApp"/></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>

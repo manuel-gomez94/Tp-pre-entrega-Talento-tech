@@ -1,0 +1,378 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    background-color: #6e5a8e;
+    /* NUEVO (opcional): degradé de fondo; si lo sacás queda tu color liso */
+    background-image: linear-gradient(160deg, #4d3d68 0%, #6e5a8e 100%);
+    background-attachment: fixed;
+    color: #fff7fb; 
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    width: 80%;
+    margin:  auto;
+    padding-bottom: 2rem;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* NUEVO: que ninguna imagen se salga de su contenedor */
+img {
+    max-width: 100%;
+}
+
+h1   {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 3rem 0;
+}
+
+h2{
+    color: #fff7fb;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+/* NUEVO: títulos de las cards centrados */
+h3 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+/* NUEVO: foco visible al navegar con el teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #f2c66d;
+    outline-offset: 2px;
+}
+
+.btn {
+    border: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+header, footer {
+    background-color: #5c4a7a;
+    color: #fff7fb;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    padding: 1rem 4rem;
+}
+
+.div-logo {
+    margin-left: 2rem;
+    font-weight: bold;
+} 
+
+.logo, 
+.header-nav a {
+    text-decoration: none;
+    font-size: 3rem;
+    color: inherit;
+    display: inline-block;
+    padding: 2rem;
+}
+
+
+.header-nav{
+    margin-right: 2rem;
+}
+
+.header-nav ul, footer .footer-list {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-list li{
+    padding: 1rem;
+}
+
+.footer-list img {
+    width: 5rem;
+    padding: 0.5rem;
+}
+
+
+
+/*COLORES*/
+
+.bg-primary {
+    background-color: #6e5a8e;
+}
+
+/* CAMBIO: antes era #250d19, igual que el texto del botón (.text-dark), y no se leía */
+.bg-secondary {
+    background-color: #f2c66d;
+}
+
+/* CAMBIO: typo (.tex-light) */
+.text-light {
+    color: #fff7fb;
+}
+
+.text-dark {
+    color: #250d19;
+}
+
+/* CAMBIO: typo (.tex-secondary) y color. Antes era #6e5a8e, igual que el fondo de la página */
+.text-secondary {
+    color: #f2c66d;
+}
+
+/* HOME*/
+
+.inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio h1{
+    width: 100%;
+    text-align: center;
+}
+
+/* CAMBIO: typo (.parraf) para que coincida con class="parrafo" del HTML */
+.parrafo {
+    width: 80%;
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem;
+}
+
+/* NUEVO: lista de navegación interna (anclas) */
+.nav-interna ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.nav-interna a {
+    display: inline-block;
+    color: #250d19;
+    background-color: #f2c66d;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+/* CAMBIO: typo (.contenerdor-tarjetas) para que coincida con el HTML */
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: center;
+    /* para que se acomode los hijos abajo no tienen espacio* el uso de flex-wrap */
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+.card {
+    background-color: #8a79a8;
+    width: 30rem;
+    /* CAMBIO: evita que se desborde en celulares chicos */
+    max-width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+        
+}
+
+/* CAMBIO: imágenes rectangulares y parejas (con el óvalo las cartas quedaban recortadas).
+   Si querés volver a tu estilo, cambiá esto por: width: 100%; border-radius: 20rem; */
+.card img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+/* NUEVO: Reseñas con GRID */
+#resenas {
+    width: 100%;
+}
+
+.contenedor-resenas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 2rem;
+}
+
+.resena {
+    background-color: #f2c66d;
+    border-radius: 1rem;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.resena blockquote {
+    font-style: italic;
+}
+
+.autor {
+    font-weight: bold;
+    text-align: right;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                  CONTACTO                                  */
+/* -------------------------------------------------------------------------- */
+.contacto {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-contacto {
+  margin: 2rem 0;
+}
+
+.form-contacto {
+  background-color: #8a79a8;
+  color: #250d19;
+
+  width: 100%;
+  max-width: 50rem;
+
+  font-size: 2rem;
+  padding: 3rem;
+  border-radius: 1rem;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* sutil */
+}
+
+.grupo-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+/* CAMBIO: saqué "outline: none" (ahora el foco se ve con la regla de arriba)
+   y sumé font-family para que los campos usen Poppins */
+.grupo-input input,
+.grupo-input textarea {
+  width: 100%;
+  padding: 1.2rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+
+  color: #250d19;
+  background-color: #fff7fb;
+
+  border: 2px solid #6e5a8e;
+  border-radius: 0.8rem;
+}
+
+.grupo-input textarea {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                MEDIA QUERIES                               */
+/* -------------------------------------------------------------------------- */
+/* NUEVO: tablets */
+@media (max-width: 900px) {
+  main {
+    width: 90%;
+  }
+}
+
+/* CAMBIO: tu media query de celulares, ahora más completa */
+@media (max-width: 600px) {
+  header,
+  footer {
+    flex-direction: column;
+  }
+
+  .header-nav,
+  .div-logo {
+    margin: 0;
+  }
+
+  .logo,
+  .header-nav a {
+    font-size: 2.2rem;
+    padding: 1rem;
+  }
+
+  main {
+    width: 94%;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .parrafo {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.7rem;
+  }
+
+  .form-contacto {
+    padding: 2rem;
+    font-size: 1.8rem;
+  }
+
+  footer {
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+}

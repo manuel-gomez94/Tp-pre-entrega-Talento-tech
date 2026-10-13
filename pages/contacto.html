@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- CAMBIO: lang="es" porque el contenido está en español -->
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contactá a Yami-no Card por consultas sobre cartas, booster boxes y accesorios de Yu-Gi-Oh!" />
+    <!-- CAMBIO: faltaba la Google Font en esta página -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;0,800;1,100;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Contacto | Yami-no Card</title>
+  </head>
+  <body>
+    <header>
+      <div class="div-logo"><a class="logo" href="../index.html">Yami-no Card</a></div>
+
+      <nav class="header-nav" aria-label="Principal">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="contacto">
+        <h1 class="titulo-contacto text-secondary">Contactanos</h1>
+
+        <!-- IMPORTANTE: reemplazá TU_ID_AQUI por el ID de TU formulario de Formspree.
+             No uses el de tu compañero: los mensajes le llegarían a él. -->
+        <form class="form-contacto" action="https://formspree.io/f/TU_ID_AQUI" method="POST">
+          <!-- NUEVO: campo nombre (lo pide la consigna) -->
+          <div class="grupo-input">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" type="text" name="nombre" required />
+          </div>
+
+          <div class="grupo-input">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required />
+          </div>
+
+          <div class="grupo-input">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+          </div>
+
+          <button class="btn bg-secondary text-dark" type="submit">Enviar mensaje</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <!-- CAMBIO: el texto de la profe pasó a ser el tuyo -->
+      <p>Sitio creado por Manu para Talento Tech</p>
+      <nav aria-label="Redes sociales">
+        <ul class="footer-list">
+          <li><img src="../img/instagramlogo.avif" alt="Logo de Instagram" /></li>
+          <li><img src="../img/whatsapplogopng.webp" alt="Logo de WhatsApp" /></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
